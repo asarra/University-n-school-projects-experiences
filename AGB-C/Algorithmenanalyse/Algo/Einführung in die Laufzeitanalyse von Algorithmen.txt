@@ -1,0 +1,57 @@
+Einführung in die Laufzeitanalyse von Algorithmen
+
+Betrachtet wird die sog. Problemgröße n.
+z.B. Sortieralgorithmen: n=Anzahl der sortierenden Elemente #Länge des Arrays
+Frage:  Wie lange benötigt der jeweilge Algorithmus zur Lösung des Problems in Abhängigkeit der Problemgröße?
+Angabe der Laufzeit als sog. Effizienzklassen.
+Eine Effizienzklasse ist eine Menge von Funktionen, die in einer Funktions...?
+
+Bekannte Funktionstypen:
+1)f(x)=c; Konstante; alphantor x
+2)f(x)=mx+b; linear
+3)f(x)=ax^2+bx+c; quadratisch
+Dazwischen liegen alle anderen polynomischen Funktionen, wie ganzrationale und gebrochen rationale Funktionen.
+4)f(x)=A*e^x+b; exponentiell
+
+Landau-Notation:
+O "Großes O" gibt an, dass ein Algo. nicht wesentlich schneller sein wird, als die angegebene Funktionsklasse
+Bsp: Bubblesort; f(x) element von O(n^2) wobei f die Laufzeit des Algos darstellt.
+
+θ "Theta" gibt an, dass ein Algo genau so schnell ist, wie angegeben.
+Bsp.: Theta(5n)
+
+Hausaufgabe: 
+1) Implementieren Sie einen Algo, der n-mal die Quadratzahl von 0 bis 100 berechnet und ausgibt.
+2) Geben Sie die Laufzeit in Landau-Notation an.
+3) Zeichen Sie einen Graphen zur Laufzeit in Abhängigkeit der Wiederholungen.
+
+1)f(x)=n*(x^2)->Implementieren-Done
+2)f(x) ist Element von O(n^2) wobei f die Laufzeit des Algos darstellt
+3)	n vorgegeben:
+	1=0.061 s//0.074 s
+	10=0.113 s//0.160 s
+	20=0.201 s
+	30=0.254 s
+	40=0.369 s
+	50=0.4 s
+	60=0.476 s
+	70=0.576 s
+	80=0.664 s
+	90=0.714 s
+	100=0.777 s
+	250=2.329 s
+	300=3.002 s
+	500=5.248 s
+	750=7.695 s
+	1000=12.134 s
+	n eingetippt als 1=0.585s
+
+//Für 100 Zahlen zum Quadrieren
+	Landau-Notation: 100*n
+	n=Wiederholungen
+f element von O(n)
+f element von big Theta(100n)
+Theta=genaue Angabe der Funktion
+O=Funktionsart
+
+for(innen) in for(aussen) = n(innen) * n(aussen)

@@ -1,0 +1,16 @@
+Messung fuer 50000 Elemente, BucketSize=100, abgeschlossen nach 10678ms
+--- Insert ---
+HashSet: 126190500ns
+TreeSet: 68085500ns
+ArrayList1: 3885700ns
+ArrayList2: 3603900ns
+--- Search ---
+HashSet: 88132600ns
+TreeSet: 48538600ns
+ArrayList1: 3458649000ns
+ArrayList2: 3388427800ns
+--- Delete ---
+HashSet: 55669900ns
+TreeSet: 41779100ns
+ArrayList1: 1810164500ns
+ArrayList2: 1782712200ns

@@ -1,0 +1,15 @@
+use buecher;
+SELECT * FROM autor;
+SELECT * FROM buch;
+use blumenundtiere;
+SELECT * FROM übersetzung ORDER BY latName ASC;
+SELECT * FROM nahrung;
+use kuenstlerverwaltung;
+SELECT * FROM kuenstlerin WHERE Stimme="alt";
+SELECT * FROM lied WHERE Kategorie="oldie";
+use projektverwaltung;
+SELECT * FROM abteilung;
+SELECT * FROM arbeitnehmer WHERE VORNAME="Karl";
+use mitfahrgelegenheit;
+SELECT * FROM schüler WHERE FUEHRERSCHEIN="ja";
+SELECT * FROM musiker;

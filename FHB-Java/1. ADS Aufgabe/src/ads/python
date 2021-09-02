@@ -1,0 +1,67 @@
+import os
+import time
+import sys
+
+def main():
+    path= os.getcwd()
+    files=[]
+    for file in os.listdir(path) :
+
+
+        print(file)
+        if file.endswith(".txt"):
+            files.append(file)
+
+    print("Welche der folgenden Dateien soll gelesen werden? :")
+    for file in files:
+            print(file+" - Drücken Sie bitte die Taste " + str(files.index(file)))
+        try:
+            index = int(input("Bitte index der Datei auswählen: ").strip())
+            selectedFile = files[index]
+
+        except:
+            print("Etwas ist leider schiefgelaufen :/")
+
+        try:
+            f =open(selectedFile, "r")
+            rawData = f.read().replace(" ", "")
+            if(len(rawData)==0):
+                print("Sorry, aber die ausgewählte Datei ist leer")
+            else:
+
+
+                formattedData =[int(x) for x in rawData.split(",")]
+                maxTeilsumme(formattedData)
+        except FileNotFoundError:
+            print("Datei wurde leider nicht gefunden :(")
+
+
+    def maxTeilsumme(arr):
+        n = len(arr)
+        maxsumme = -sys.maxsize -1
+        sumcount=0
+        von = bis = 0
+        startTime = time.time()
+        for i in range(1,n+1):
+            for j in range(i, n+1):
+
+                summe = 0
+            for k in range(i,j+1):
+                summe += arr[k-1]
+                sumcount+=1
+            if summe > maxsumme:
+                maxsumme = summe
+                von = i
+                bis = j
+        endTime = time.time()
+    totalTime = endTime - startTime
+    print(f"max. Teilsumme: {maxsumme}" )
+    print(f"erster Index: {von}")
+    print(f"letzter Index: {bis}")
+    print(f"Anzahl der Additionen: {sumcount}")
+    print(f"Dauer für die Hauptschleife: {totalTime} Sekunden")
+
+
+if __name__ == "__main__":
+    main()
+

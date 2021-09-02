@@ -1,0 +1,4 @@
+Beschreiben Sie in eigenen Worten die Bedeutung und Verwendung des
+ersten Parameters in Methoden.
+
+Das erste Parameter (meistens "self", kann aber auch etwas anderes heißen) ist da, um bei der Verwendung einer Klassenmethode zeigen zu können, zu welcher Instanz die Methode gehört.
